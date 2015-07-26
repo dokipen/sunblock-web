@@ -5,10 +5,10 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'connect-src': "'self' data: sunblock.doki-pen.org"
     },
-    modulePrefix: 'sunblock',
+    modulePrefix: 'sunblock-web',
     environment: environment,
-    baseURL: '/',
-    locationType: 'auto',
+    baseURL: '/sunblock-web',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
