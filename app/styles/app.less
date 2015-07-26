@@ -1,0 +1,35 @@
+@svg-background: #ffffdd;
+@svg-lines: #aa8888;
+@svg-head-color: #aaddaa;
+@svg-node-color: #ddaaaa;
+@svg-text-color: #662222;
+
+body {
+    background-color: @svg-background;
+}
+
+svg {
+    z-index: 10;
+    overflow: visible;
+    background-color: @svg-background;
+    .node {
+        circle.head {
+            fill: @svg-head-color;
+            stroke: @svg-lines;
+        }
+        circle {
+            fill: @svg-node-color;
+            stroke: @svg-lines;
+        }
+        text {
+            fill: @svg-text-color;
+            text-anchor: middle;
+        }
+    }
+    .link {
+        stroke: @svg-lines;
+        marker-end: url(#head);
+    }
+}
+
+
