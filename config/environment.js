@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
+    contentSecurityPolicy: {
+      'connect-src': "'self' data: sunblock.doki-pen.org"
+    },
     modulePrefix: 'sunblock',
     environment: environment,
     baseURL: '/',
