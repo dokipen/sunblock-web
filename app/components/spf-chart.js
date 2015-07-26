@@ -67,7 +67,7 @@ Graph.prototype.start = function() {
       'r': this.conf.get('radius'),
       'stroke-width': this.conf.get('strokeWidth')
     });
-  g.append('text').attr({'font-size': this.conf.get('fontSize')});
+  g.append('text').attr({'font-size': this.conf.get('fontSize'), 'y': this.conf.get('radius') / 10});
   nodes.exit().remove();
   nodes.select('text').text(function(d) { return d.id; });
 

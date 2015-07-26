@@ -1,16 +1,29 @@
-@svg-background: #ffffdd;
-@svg-lines: #aa8888;
-@svg-head-color: #aaddaa;
-@svg-node-color: #ddaaaa;
-@svg-text-color: #662222;
+@svg-background: #fafacf;
+@svg-lines: #777799;
+@svg-head-color: #ffffbb;
+@svg-node-color: #d3a369;
+@svg-text-color: #676058;
 
 body {
     background-color: @svg-background;
+    color: @svg-text-color;
+    font-family: 'Open Sans Condensed', sans-serif;
+    h2 {
+        font-weight: bolder;
+        margin-left: 0.4em;
+    }
+    input.domain {
+        margin: 0 2em;
+    }
 }
+
+svg:not(:root) {
+    overflow: visible;
+}
+
 
 svg {
     z-index: 10;
-    overflow: visible;
     background-color: @svg-background;
     .node {
         circle.head {
@@ -24,11 +37,17 @@ svg {
         text {
             fill: @svg-text-color;
             text-anchor: middle;
+            font-weight: bold;
         }
     }
     .link {
         stroke: @svg-lines;
         marker-end: url(#head);
+    }
+
+    #head {
+        stroke: @svg-lines;
+        fill: @svg-lines;
     }
 }
 

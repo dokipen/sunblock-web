@@ -3,8 +3,13 @@
 module.exports = function(environment) {
   var ENV = {
     contentSecurityPolicy: {
-      'connect-src': "'self' data: sunblock.doki-pen.org"
+      'connect-src': "'self' data: sunblock.doki-pen.org",
+      'font-src': "'self' fonts.gstatic.com",
+      'style-src': "'self' fonts.googleapis.com"
     },
+    googleFonts: [
+      'Open Sans Condensed:300'
+    ],
     modulePrefix: 'sunblock-web',
     environment: environment,
     baseURL: '/sunblock-web',
