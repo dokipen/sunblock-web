@@ -3,7 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     contentSecurityPolicy: {
-      'connect-src': "'self' data: sunblock.doki-pen.org",
+      'connect-src': "'self' data: sunblock.herokuapp.com",
       'font-src': "'self' fonts.gstatic.com",
       'style-src': "'self' fonts.googleapis.com"
     },
